@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Выпадающее меню</title>
+  <link rel="stylesheet" href="style.css">
+  <script src="script.js" defer></script>
+</head>
+<body>
+  <main class="container">
+    <h1>Выпадающее меню</h1>
+    <nav aria-label="Основное меню" id="menu">
+      <ul class="menu">
+        <li>
+          <button type="button" aria-expanded="false">Разработка сайтов</button>
+          <ul hidden>
+            <li>
+              <button type="button" aria-expanded="false">HTML</button>
+              <ul hidden>
+                <li><button type="button" data-url="https://developer.mozilla.org/ru/docs/Web/HTML">Справочник HTML</button></li>
+                <li><button type="button" data-url="https://developer.mozilla.org/ru/docs/Learn_web_development/Extensions/Forms">HTML-формы</button></li>
+              </ul>
+            </li>
+            <li>
+              <button type="button" aria-expanded="false">CSS</button>
+              <ul hidden>
+                <li><button type="button" data-url="https://developer.mozilla.org/ru/docs/Web/CSS">Справочник CSS</button></li>
+                <li><button type="button" data-url="https://developer.mozilla.org/ru/docs/Web/CSS/CSS_flexible_box_layout">Flexbox</button></li>
+              </ul>
+            </li>
+            <li>
+              <button type="button" aria-expanded="false">JavaScript</button>
+              <ul hidden>
+                <li><button type="button" data-url="https://developer.mozilla.org/ru/docs/Web/JavaScript">Справочник JavaScript</button></li>
+                <li><button type="button" data-url="https://developer.mozilla.org/ru/docs/Web/API/Document_Object_Model">DOM</button></li>
+              </ul>
+            </li>
+          </ul>
+        </li>
+        <li>
+          <button type="button" aria-expanded="false">Инструменты</button>
+          <ul hidden>
+            <li>
+              <button type="button" aria-expanded="false">Редакторы кода</button>
+              <ul hidden>
+                <li><button type="button" data-url="https://code.visualstudio.com/">Visual Studio Code</button></li>
+                <li><button type="button" data-url="https://codepen.io/">CodePen</button></li>
+              </ul>
+            </li>
+            <li>
+              <button type="button" aria-expanded="false">Контроль версий</button>
+              <ul hidden>
+                <li><button type="button" data-url="https://git-scm.com/">Git</button></li>
+                <li><button type="button" data-url="https://github.com/">GitHub</button></li>
+              </ul>
+            </li>
+          </ul>
+        </li>
+      </ul>
+    </nav>
+    <p id="message" hidden>Перейти по ссылке: <a id="selectedLink" href="#" target="_blank" rel="noopener noreferrer"></a></p>
+  </main>
+</body>
+</html>
